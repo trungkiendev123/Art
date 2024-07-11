@@ -1,0 +1,9 @@
+﻿@page
+@model ArtisShopping.Pages.Shared.CategoriesModel
+
+
+    @foreach (var category in Model.categories)
+    {
+            <a class="nav-item nav-link" asp-page="/Products/FilterProduct" asp-route-categoryId="@category.Id">@category.Name</a>
+    }
+

@@ -1,0 +1,71 @@
+﻿@page
+@model ArtisShopping.Pages.CartModel
+@{
+}
+<div class="container-fluid">
+    <div class="row px-xl-5">
+        <div class="col-12">
+            <nav class="breadcrumb bg-light mb-30">
+                <a class="breadcrumb-item text-dark" asp-page="./Index">Trang Chủ</a>
+                <span class="breadcrumb-item active">Giỏ Hàng</span>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb End -->
+<!-- Cart Start -->
+<div class="container-fluid">
+    <div class="row px-xl-5">
+        <div class="col-lg-8 table-responsive mb-5">
+            @if(Model.CartItems.Count > 0)
+            {
+                <table class="table table-light table-borderless table-hover mb-0">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Sản Phẩm</th>
+                            <th>Giá</th>
+                            <th>Hành Động</th>
+                        </tr>
+                    </thead>
+                    <tbody class="align-middle">
+                        @foreach (var item in Model.CartItems)
+                        {
+                            <tr>
+                                <td class="align-middle"><img src="@item.Product.Image" alt="" style="width: 50px;"> @item.Product.Name</td>
+                                <td class="align-middle">@item.Product.Price?.ToString("#,##0")</td>
+                                <td class="align-middle">
+                                    <form method="post" asp-page-handler="RemoveFromCart">
+                                        <button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button>
+                                        <input type="hidden" name="cartId" value="@item.Id" />
+                                    </form>
+                                    
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <div class="text-center">
+                    Chưa Có Sản Phẩm Trong Giỏ Hàng
+                </div>
+                
+            }
+            
+        </div>
+        <div class="col-lg-4">
+            <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Tổng giá trị giỏ hàng</span></h5>
+            <div class="bg-light p-30 mb-5">
+                <div class="pt-2">
+                    <div class="d-flex justify-content-between mt-2">
+                        <h5>Tổng</h5>
+                        <h5>@Model.TotalOrderValue?.ToString("#,##0") VND</h5>
+                    </div>
+                    <button class="btn btn-block btn-primary font-weight-bold my-3 py-3">Thủ Tục Giao Hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

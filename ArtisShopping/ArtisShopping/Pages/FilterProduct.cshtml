@@ -1,0 +1,78 @@
+﻿@page
+@model ArtisShopping.Pages.FilterProductModel
+@{
+}
+<div class="container-fluid">
+        <div class="row px-xl-5">
+            <div class="col-12">
+                <nav class="breadcrumb bg-light mb-30">
+                    <a class="breadcrumb-item text-dark" asp-page="./Index">Trang Chủ</a>
+                    <span class="breadcrumb-item active">Danh Sách Sản Phẩm</span>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+
+    <!-- Shop Start -->
+    <div class="container-fluid">
+        <div class="row px-xl-5">
+            <!-- Shop Sidebar Start -->
+            <!-- Shop Sidebar End -->
+
+            <!-- Shop Product Start -->
+            <div class="col-lg-9 col-md-8">
+                <div class="row pb-3">
+                @foreach(var item in Model.Products)
+                {
+                    <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+                        <div class="product-item bg-light mb-4">
+                            <div class="product-img position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="@item.Image" alt="" style="height:350px;width350px;">
+                                <div class="product-action">
+                                    <a class="btn btn-outline-dark btn-square" asp-page-handler="AddToCart" asp-route-productId="@item.Id"><i class="fa fa-shopping-cart"></i></a>
+                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                                    <a class="btn btn-outline-dark btn-square" asp-page="./ProductDetail" asp-route-id="@item.Id"><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center py-4">
+                                <a class="h6 text-decoration-none text-truncate" href="">@item.Name</a>
+                                <div class="d-flex align-items-center justify-content-center mt-2">
+                                    <h5>@item.Price?.ToString("#,##0") VND</h5>
+                                </div>
+                          
+                            </div>
+                        </div>
+                    </div>
+                }
+                
+                    <div class="col-12">
+                        <nav>
+                          <ul class="pagination justify-content-center">
+                            @if (Model.CurrentPage > 1)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" asp-page="./FilterProduct" asp-route-pageIndex="@(Model.CurrentPage - 1)" asp-route-categoryId="@Model.CurrentCategoryId">Previous</a>
+                                </li>
+                            }
+                            @for (int i = 1; i <= Model.TotalPages; i++)
+                            {
+                                <li class="page-item @(Model.CurrentPage == i ? "active" : "")">
+                                    <a class="page-link" asp-page="./FilterProduct" asp-route-pageIndex="@i" asp-route-categoryId="@Model.CurrentCategoryId">@i</a>
+                                </li>
+                            }
+                            @if (Model.CurrentPage < Model.TotalPages)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" asp-page="./FilterProduct" asp-route-pageIndex="@(Model.CurrentPage + 1)" asp-route-categoryId="@Model.CurrentCategoryId">Next</a>
+                                </li>
+                            }
+                          </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- Shop Product End -->
+        </div>
+    </div>

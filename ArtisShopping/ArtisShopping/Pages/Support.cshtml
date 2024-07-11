@@ -1,0 +1,156 @@
+﻿@page
+@model ArtisShopping.Pages.SupportModel
+@{
+}
+<style>
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        color: #008080;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        color: #006666;
+        margin-bottom: 10px;
+    }
+
+    ol, ul {
+        margin: 0 0 20px 20px;
+        padding: 0;
+    }
+
+        ol li, ul li {
+            margin-bottom: 10px;
+        }
+
+    strong {
+        color: #333;
+    }
+
+    section {
+        margin-bottom: 40px;
+    }
+</style>
+<div class="container-fluid">
+    <section id="guide-order">
+        <h2>Hướng Dẫn Đặt Hàng</h2>
+        <ol>
+            <li>
+                <strong>Bước 1: Tạo Tài Khoản</strong>
+                <ol>
+                    <li>Truy cập vào trang web của chúng tôi và nhấn vào nút "Đăng ký" ở góc trên bên phải màn hình.</li>
+                    <li>Điền đầy đủ thông tin cá nhân cần thiết, bao gồm tên, email, và mật khẩu.</li>
+                    <li>Nhấn "Đăng ký" để hoàn tất quá trình tạo tài khoản.</li>
+                    <li>Kiểm tra email để xác nhận tài khoản của bạn.</li>
+                </ol>
+            </li>
+            <li>
+                <strong>Bước 2: Lựa Chọn Sản Phẩm</strong>
+                <ol>
+                    <li>Sử dụng thanh tìm kiếm hoặc duyệt qua các danh mục sản phẩm trên trang web để tìm kiếm sản phẩm bạn muốn mua.</li>
+                    <li>Nhấn vào sản phẩm để xem chi tiết, bao gồm mô tả, giá cả và hình ảnh.</li>
+                    <li>Chọn số lượng và các tuỳ chọn khác (nếu có), sau đó nhấn vào nút "Thêm vào giỏ hàng".</li>
+                </ol>
+            </li>
+            <li>
+                <strong>Bước 3: Tiến Hành Mua Hàng</strong>
+                <ol>
+                    <li>Khi đã chọn xong các sản phẩm muốn mua, nhấn vào biểu tượng giỏ hàng ở góc trên bên phải màn hình để xem lại giỏ hàng của bạn.</li>
+                    <li>Kiểm tra lại các sản phẩm trong giỏ hàng và nhấn "Tiến hành thanh toán" để bắt đầu quá trình mua hàng.</li>
+                </ol>
+            </li>
+            <li>
+                <strong>Bước 4: Thanh Toán</strong>
+                <ol>
+                    <li>Điền đầy đủ thông tin giao hàng, bao gồm tên, địa chỉ và số điện thoại.</li>
+                    <li>Chọn phương thức thanh toán phù hợp (chuyển khoản ngân hàng, thẻ tín dụng, ví điện tử, v.v.).</li>
+                    <li>Nhấn "Xác nhận đặt hàng" để hoàn tất quá trình thanh toán.</li>
+                </ol>
+            </li>
+            <li>
+                <strong>Bước 5: Xác Nhận Đơn Hàng</strong>
+                <ol>
+                    <li>Sau khi đặt hàng thành công, bạn sẽ nhận được email xác nhận từ chúng tôi.</li>
+                    <li>Đơn hàng của bạn sẽ được người bán kiểm tra và xử lý.</li>
+                    <li>Bản gốc của đơn hàng sẽ được gửi tới email của bạn.</li>
+                </ol>
+            </li>
+        </ol>
+        <p><strong>Lưu Ý</strong></p>
+        <ul>
+            <li>Vui lòng kiểm tra kỹ thông tin trước khi xác nhận đặt hàng để đảm bảo mọi thứ đều chính xác.</li>
+            <li>Nếu có bất kỳ vấn đề hoặc câu hỏi nào, bạn có thể liên hệ với bộ phận hỗ trợ khách hàng của chúng tôi qua email hoặc số điện thoại hiển thị trên trang web.</li>
+            <li>Bạn phải thanh toán trước khi đặt hàng thì đơn hàng mới được tính là thành công.</li>
+        </ul>
+        <p>Chúc bạn có trải nghiệm mua sắm tuyệt vời!</p>
+    </section>
+
+    <section id="return-policy">
+        <h2>Chính Sách Trả Hàng và Hoàn Tiền</h2>
+        <p>Chào mừng bạn đến với trang web của chúng tôi! Chúng tôi cam kết mang đến cho bạn những sản phẩm thiết kế số chất lượng cao và dịch vụ tốt nhất. Dưới đây là các chính sách về trả hàng và hoàn tiền:</p>
+        <h3>Hủy Đơn Hàng</h3>
+        <ul>
+            <li><strong>Trước khi bên bán xác nhận đơn hàng:</strong> Khách hàng có thể hủy đơn hàng bất kỳ lúc nào trước khi đơn hàng được xác nhận bởi người bán.</li>
+            <li><strong>Sau khi bên bán xác nhận đơn hàng:</strong> Đơn hàng sẽ không thể hủy được sau khi đã được người bán xác nhận.</li>
+        </ul>
+        <h3>Chính Sách Hoàn Tiền</h3>
+        <p>Chúng tôi chỉ hỗ trợ hoàn tiền trong các trường hợp sau:</p>
+        <ul>
+            <li><strong>Sản phẩm không giống với hình ảnh mô tả:</strong> Nếu sản phẩm bạn nhận được không giống với mô tả và hình ảnh trên trang web, bạn có quyền khiếu nại và yêu cầu hoàn tiền.</li>
+            <li><strong>Người bán gian lận:</strong> Trong trường hợp phát hiện người bán có hành vi gian lận, bạn có thể liên hệ với chúng tôi để khiếu nại và yêu cầu hoàn tiền.</li>
+        </ul>
+        <h3>Lưu Ý Quan Trọng</h3>
+        <p>Không có chính sách trả hàng và hoàn tiền: Chúng tôi không hỗ trợ trả hàng và hoàn tiền đối với các trường hợp khác ngoài hai trường hợp nêu trên. Do đặc thù sản phẩm là các thiết kế số (digital design), chúng tôi không thể thu hồi hay thay thế sản phẩm sau khi đã giao dịch thành công.</p>
+        <h3>Quy Trình Khiếu Nại</h3>
+        <ol>
+            <li><strong>Liên hệ với chúng tôi:</strong> Nếu bạn gặp phải các vấn đề nêu trên, vui lòng liên hệ với bộ phận hỗ trợ khách hàng qua email hoặc số điện thoại hiển thị trên trang web.</li>
+            <li><strong>Cung cấp thông tin chi tiết:</strong> Hãy cung cấp chi tiết về vấn đề bạn gặp phải, bao gồm hình ảnh hoặc bằng chứng liên quan.</li>
+            <li><strong>Xử lý khiếu nại:</strong> Chúng tôi sẽ kiểm tra và xử lý khiếu nại của bạn trong thời gian sớm nhất. Nếu khiếu nại của bạn được xác nhận, chúng tôi sẽ tiến hành hoàn tiền cho bạn.</li>
+        </ol>
+        <p>Chúng tôi luôn lắng nghe và sẵn sàng hỗ trợ bạn để đảm bảo quyền lợi và trải nghiệm mua sắm tốt nhất. Cảm ơn bạn đã tin tưởng và sử dụng dịch vụ của chúng tôi!</p>
+    </section>
+
+    <section id="seller-policy">
+        <h2>Quy Định Dành Cho Người Bán</h2>
+        <p>Chào mừng bạn đến với Fjob! Để đảm bảo quyền lợi của cả người bán và người mua, cũng như tạo nên một môi trường giao dịch an toàn và tin cậy, chúng tôi xin gửi đến bạn các quy định dành cho người bán như sau:</p>
+        <h3>Bản Quyền</h3>
+        <ul>
+            <li><strong>Lưu ý về bản quyền:</strong> Tất cả các tác phẩm đăng lên Fjob phải là sản phẩm do chính bạn tạo ra hoặc bạn có quyền sử dụng và bán chúng. Bạn phải đảm bảo rằng các tác phẩm của bạn không vi phạm bản quyền của bất kỳ bên thứ ba nào.</li>
+            <li><strong>Trách nhiệm pháp lý:</strong> Fjob không chịu trách nhiệm về bất kỳ tranh chấp bản quyền nào phát sinh từ các tác phẩm được đăng tải. Nếu có bất kỳ khiếu nại hoặc kiện tụng về bản quyền, bạn sẽ phải tự chịu trách nhiệm hoàn toàn.</li>
+        </ul>
+        <h3>Đăng Tác Phẩm</h3>
+        <ul>
+            <li>
+                <strong>Thông tin đầy đủ:</strong> Khi đăng tác phẩm lên Fjob, bạn phải cung cấp đầy đủ các thông tin liên quan, bao gồm:
+                <ul>
+                    <li>Tên tác phẩm</li>
+                    <li>Mô tả chi tiết về tác phẩm</li>
+                    <li>Hình ảnh minh họa (nếu có)</li>
+                    <li>Giá bán và các điều kiện giao dịch (nếu có)</li>
+                </ul>
+            </li>
+            <li><strong>Mô tả chính xác:</strong> Mô tả tác phẩm cần phải chính xác và rõ ràng để người mua có thể hiểu rõ về sản phẩm. Tránh sử dụng những thông tin sai lệch hoặc gây hiểu nhầm.</li>
+        </ul>
+        <h3>Thanh Toán</h3>
+        <ul>
+            <li><strong>Thanh toán cho người bán:</strong> Tiền sản phẩm sẽ được thanh toán cho người bán sau khi đơn hàng được xác nhận thành công. Bạn có thể theo dõi trạng thái đơn hàng và thanh toán qua tài khoản của mình trên Fjob.</li>
+            <li><strong>Chi phí hoa hồng:</strong> Fjob sẽ thu phí hoa hồng 10% trên tổng giá trị mỗi đơn hàng. Khoản phí này sẽ được tự động trừ vào số tiền thanh toán cho bạn.</li>
+            <li><strong>Thời gian thanh toán:</strong> Thanh toán sẽ được thực hiện vào ngày 5 hàng tháng. Bạn sẽ nhận được tổng số tiền từ các đơn hàng đã được xác nhận và trừ đi chi phí hoa hồng.</li>
+        </ul>
+        <h3>Chính Sách Chung</h3>
+        <ul>
+            <li><strong>Tuân thủ quy định:</strong> Người bán phải tuân thủ các quy định và chính sách của Fjob. Việc vi phạm các quy định này có thể dẫn đến việc tài khoản của bạn bị khóa hoặc xóa mà không cần thông báo trước.</li>
+            <li><strong>Đóng góp xây dựng cộng đồng:</strong> Chúng tôi khuyến khích bạn tham gia tích cực vào cộng đồng Fjob, chia sẻ kinh nghiệm và hỗ trợ lẫn nhau để cùng phát triển.</li>
+        </ul>
+        <p>Chúng tôi hy vọng những quy định này sẽ giúp bạn có được trải nghiệm bán hàng tốt nhất trên Fjob. Nếu có bất kỳ câu hỏi hoặc thắc mắc nào, vui lòng liên hệ với bộ phận hỗ trợ khách hàng của chúng tôi. Cảm ơn bạn đã hợp tác và chúc bạn thành công!</p>
+    </section>
+</div>
